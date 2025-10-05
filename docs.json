@@ -22,20 +22,49 @@
           },
           {
             "group": "Bullet Generator",
+            "icon": "pen-to-square",
             "pages": [
-              "bullet-generator/index"
+              "bullet-generator/index",
+              {
+                "group": "Examples",
+                "pages": [
+                  "bullet-generator/examples/army",
+                  "bullet-generator/examples/usaf",
+                  "bullet-generator/examples/navy",
+                  "bullet-generator/examples/marines",
+                  "bullet-generator/examples/coast-guard"
+                ]
+              }
             ]
           },
           {
             "group": "Award Generator",
+            "icon": "award",
             "pages": [
-              "award-generator/index"
+              "award-generator/index",
+              {
+                "group": "Examples",
+                "pages": [
+                  "award-generator/examples/army",
+                  "award-generator/examples/usaf",
+                  "award-generator/examples/navy",
+                  "award-generator/examples/marines",
+                  "award-generator/examples/coast-guard"
+                ]
+              }
             ]
           },
           {
             "group": "Military Units",
+            "icon": "users",
             "pages": [
-              "military-units/index"
+              "military-units/index",
+              {
+                "group": "Guides",
+                "pages": [
+                  "military-units/guides/admin-guide",
+                  "military-units/guides/member-guide"                ]
+              }
             ]
           }
         ]
