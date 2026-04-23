@@ -3,7 +3,26 @@ title: Air Force
 description: Air Force Bullet Generator Examples
 ---
 
-## EPB Statement
+## EPB/OPB - Tailored
+
+Designed for the current EPB/OPB performance brief system, this format generates narrative statements tied to one of the four Major Performance Areas (MPAs): **Executing the Mission**, **Leading People**, **Managing Resources**, or **Improving the Unit**. Outputs run 300-350 characters, begin with a compelling action verb in past tense, and use `[rank/name]` and `[he/she]` placeholders. Ranks are abbreviated (e.g., SrA, SSgt, TSgt) and the ratee is referred to by last name only. Quantitative detail is emphasized, with `xx` placeholders where specific numbers weren't supplied.
+
+The four MPAs shape the angle of the output:
+
+- **Executing the Mission** — knowledge, initiative, and adaptability driving timely, high-quality results.
+- **Leading People** — cohesive teams, clear communication, and emotional intelligence.
+- **Managing Resources** — stewardship of assigned resources and accountability for outcomes.
+- **Improving the Unit** — critical thinking, innovation, and creative problem-solving.
+
+**Example Input:**
+I took charge during a system malfunction, coordinating the repair team and restoring operations.
+
+**MPA:** Executing the Mission
+
+**Example Output:**
+[rank/name] demonstrated exceptional initiative during a critical system malfunction; [he/she] effectively coordinated xx repair personnel, oversaw the restoration of xx vital components, and ensured full operational capacity was recovered within xx hours, directly contributing to the success of xx mission objectives. (Character Count: 323)
+
+## EPB/OPB Statement
 
 Designed for the new EPB system, this format aims to create outputs close to 350 characters, focusing on the user's achievements and their impact. While it sometimes goes over the 350-character limit, I'm working to make it fit better. This option is a great starting point but might need some tweaks by the user.
 
@@ -12,6 +31,37 @@ I developed a web application that streamlines the creation of military performa
 
 **Example Output:**
 [rank/name] championed the creation of a game-changing web application; [he/she] transformed the military performance report creation process, resulting in a remarkable xx% reduction in processing time, an impressive xx% increase in accuracy, and a significant xx% improvement in personnel resource management. (Character Count: 310)
+
+## HLR Assessment
+
+Produces three distinct Higher Level Reviewer (HLR) Assessment options for USAF Enlisted Performance Briefs, each capped at 250 characters. Written in the commander's voice with a tone of strong praise, each option emphasizes achievements, leadership, and potential for advancement or education. Uses `[rank/name]` and `[he/she]`/`[him/her]` placeholders when a name and rank aren't provided, and uses `xx` for any missing quantifiable figures. Pronouns "I" and "we" are never used.
+
+**Example Input:**
+Airman led multiple projects and improved team efficiency.
+
+**Example Output:**
+
+**Option 1:** [rank/name]'s dynamic leadership drove key projects to success, boosting team efficiency and mission impact; [he/she] is strongly recommended for further leadership opportunities and advancement.
+
+**Option 2:** [rank/name] excelled as a project lead, elevating productivity and team cohesion; [he/she] is primed for advanced assignments and continued professional growth.
+
+**Option 3:** Exceptional project management by [rank/name] resulted in xx% efficiency gains; [he/she] is a standout performer poised for expanded responsibilities and senior NCO development.
+
+## Duty Description
+
+Generates three distinct EPR/OPR duty descriptions from a single input. Each output is capped at 450 characters (including spaces and punctuation) and follows the Air Force structure: primary duty/position first, 2-3 key responsibilities or programs led, quantified personnel and resources managed, and a closing statement on broader mission contribution. Use `xx` for any missing numbers. For 365-day extended deployments, a TDY duty description is used instead. For commanders, total force assigned and a brief unit mission description are included. For colonels in CSAF-designated wing equivalent positions, outputs begin with "Wing Equivalent."
+
+**Example Input:**
+Airman is an F-15E Lead Weapons System Officer overseeing flying operations; supervises 75 aircrew, 20 support staff, 25 aircraft worth $1.4B.
+
+**Example Output:**
+
+1. Combat ready, worldwide deployable Lead Weapons System Officer driving all F-15E mission sets. Directs commander's priorities—standardization, safety, security, morale. Executes daily flying ops for 75 aircrew, 20 support, 25 aircraft ($1.4B). Integrates joint/multinational forces, supports 24/7 readiness.
+
+2. Lead Weapons System Officer charged with full-spectrum F-15E ops. Manages key programs—evaluation, safety, morale initiatives. Responsible for 75 crew, 20 support, 25 jets valued at $1.4B. Ensures seamless operations, delivers decisive airpower, advances joint mission objectives.
+
+3. Principal F-15E Weapons System Officer—drives command programs, safety and readiness initiatives. Oversees daily ops for 75 aviators, 20 staff, 25 aircraft ($1.4B). Spearheads joint integration and mission execution, ensuring squadron meets rapid response and combat requirements.
+
 
 ## ALQ Statement
 
