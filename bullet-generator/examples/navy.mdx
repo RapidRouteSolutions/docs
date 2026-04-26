@@ -15,7 +15,7 @@ Innovative Developer. Engineered a cutting-edge web application to streamline mi
 
 ## Chief Eval
 
-Targets NAVPERS 1616/27 (CHIEFEVAL) and follows the v33 trait set. Unlike the standard three-option formats, the Chief Eval generates up to three short performance comments for each of the seven CPO guiding-principle traits: **Technical Mastery**, **Institutional Expertise**, **Professionalism**, **Integrity**, **Accountability**, **Deckplate Leadership**, and **Team Effectiveness**. The result panel groups comments by trait so each can be copied independently into the matching CHIEFEVAL block. Each comment is standalone (not a continuation), action/result/impact-oriented, and sized to fit the v33 six-line trait limit.
+Built for NAVPERS 1616/27 (CHIEFEVAL) and aligned with the v33 trait set. Unlike the standard three-option formats, the Chief Eval generator produces up to three short performance comments for each of the seven CPO guiding-principle traits: **Technical Mastery**, **Institutional Expertise**, **Professionalism**, **Integrity**, **Accountability**, **Deckplate Leadership**, and **Team Effectiveness**. The result panel groups comments by trait so each can be copied independently into the matching CHIEFEVAL block. Each comment is standalone (not a continuation), action / result / impact oriented, and sized to fit the v33 six-line trait limit.
 
 **Example Input:**
 CMC led xx-Sailor mess through 7-month deployment, drove qualification pipeline that produced xx new watchstanders, and set new climate baseline after rebuilding mess engagement.
@@ -47,7 +47,7 @@ RECOMMENDED FOR LPO AND ADVANCEMENT TO E6 — RETAIN IN MOST DEMANDING DIVISIONA
 
 ## FITREP - Tailored (W2-O6)
 
-Targets **NAVPERS 1610/2** (Fitness Report and Counseling Record) for warrant officers and officers W2-O6. Section-aware — the user picks one of 12 FITREP surfaces and the model shapes its three options to that section's BUPERS guidance and NAVFIT98A character/line caps:
+Built for **NAVPERS 1610/2** (Fitness Report and Counseling Record), warrant officers and officers W2-O6. Section-aware — pick one of 12 FITREP surfaces and the three options are sized to that section's BUPERS guidance and NAVFIT98A character / line caps:
 
 - **Block 28** Command Employment / Achievements
 - **Block 29** Primary / Collateral / Watchstanding Duties / PFA
@@ -56,7 +56,7 @@ Targets **NAVPERS 1610/2** (Fitness Report and Counseling Record) for warrant of
 - **Block 41** Comments on Performance (full narrative, 12-16 lines, 12-point safe)
 - **Block 41 GRGB** Get Real Get Better commentary for CDR/CAPT FITREPs
 
-Output style follows BUPERS Chapter 13: bullet form for Block 41 narrative, factual openings, action / result / impact lines, `xx` placeholders for unsupplied numbers, no fabricated promotion-tier language.
+Output follows BUPERS Chapter 13: bullet form for the Block 41 narrative, factual openings, action / result / impact lines, `xx` placeholders for unsupplied numbers, and no fabricated promotion-tier language.
 
 **Example Input:**
 LT Smith was communications officer for 12 months, led 18 Sailors, managed $2.4M radio suite, CMS custodian, OOD underway.
@@ -69,14 +69,14 @@ COMMUNICATIONS OFFICER-12; CMS CUSTODIAN-12; OOD U/W-8. Led 18 Sailors; managed 
 
 ## EVAL - Tailored (E1-E6)
 
-Targets **NAVPERS 1616/26** (Evaluation Report and Counseling Record) for E1-E6 enlisted Sailors. Section-aware — the user picks one of 10 EVAL surfaces and the model shapes its three options to that section:
+Built for **NAVPERS 1616/26** (Evaluation Report and Counseling Record), E1-E6 enlisted Sailors. Section-aware — pick one of 10 EVAL surfaces and the three options are sized to that section:
 
 - **Block 33-39 trait support** Professional Knowledge, Quality of Work, Climate / EO, Bearing / Character, Personal Job Accomplishment / Initiative, Teamwork, Leadership (each generates Block 43 comment text supporting that trait)
 - **Block 41** Career Recommendations
 - **Block 43** Comments on Performance (full narrative, 12-16 lines)
 - **Block 44** Qualifications / Achievements
 
-The prompt scales tone by paygrade context: E1-E3 emphasizes qualification growth, watchstanding, and reliability; E4-E6 emphasizes petty officer leadership, program ownership, and advancement potential. For E5/E6 full Block 43 output, the prompt reserves room for the post summary group reporting senior cumulative average score (PSG RSCA) without inventing a value.
+Tone scales by paygrade context: E1-E3 emphasizes qualification growth, watchstanding, and reliability; E4-E6 emphasizes petty officer leadership, program ownership, and advancement potential. For E5/E6 full Block 43 output, room is reserved for the post summary group reporting senior cumulative average score (PSG RSCA) — placeholder only, never invented.
 
 **Example Input:**
 E6 Jones led 14 Sailors through INSURV prep, corrected 184 discrepancies, improved work center maintenance from 72 to 96 percent, qualified 9 Sailors.
@@ -94,7 +94,7 @@ RECOMMENDED FOR INCREASED RESPONSIBILITY.
 
 ## Chief Eval Summary (Block 40)
 
-Targets **NAVPERS 1616/27 Block 40** Reporting Senior Comments on Performance. Returns three options shaped to the v33 six-line Block 40 surface: a concise opening or ranking line when factual, one to three performance / leadership impact lines, optional soft breakout when supplied, and a closing potential or retention line. Returns the standard three-option result format (independent of the seven-trait Chief Eval format).
+Built for **NAVPERS 1616/27 Block 40** Reporting Senior Comments on Performance. Returns three options shaped to the v33 six-line Block 40 surface: a concise opening or ranking line when factual, one to three performance / leadership impact lines, optional soft breakout when supplied, and a closing potential or retention line. Returns the standard three-option result format (independent of the seven-trait Chief Eval format above).
 
 **Example Input:**
 CMC led mess through deployment with deck plate impact, mentored five first-class to advance, sustained xx% retention.

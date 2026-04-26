@@ -1,40 +1,38 @@
 ---
-title: Releases
-description: New features, format additions, and updates to RapidEPR.
+title: What's New
+description: New formats and improvements in RapidEPR.
 ---
 
-# Releases
+# What's New
 
-Latest changes to the RapidEPR Bullet Generator and Award Generator. Newest releases are listed first.
+The latest formats and improvements in RapidEPR. Newest releases are listed first.
 
 ## April 2026
 
-### Navy Tailored MVP
+### Navy FITREP Tailored, EVAL Tailored, and Chief Eval Summary
 
-Three new Navy bullet formats are now available in the Bullet Generator. Each one targets a specific NAVPERS form and lets you pick the exact section / block you're writing for, so output is shaped to that surface's BUPERS guidance and NAVFIT98A character / line caps.
+Three new Navy options bring the same section-aware quality you already get with our Air Force EPB/OPB Tailored and Army OER Tailored formats to Sailors, warrant officers, and officers.
 
-- **FITREP - Tailored (W2-O6)** — NAVPERS 1610/2 for warrant officers and officers W2-O6. Twelve sections covering Block 28 (Command Employment), Block 29 (Duties / PFA), Block 33-39 trait support (Professional Expertise, Climate / EO, Bearing / Character, Teamwork, Mission Accomplishment / Initiative, Leadership, Tactical Performance), Block 40 (Career Recommendations), Block 41 (Comments on Performance), and Block 41 GRGB Commentary for CDR / CAPT FITREPs.
-- **EVAL - Tailored (E1-E6)** — NAVPERS 1616/26 for E1-E6 enlisted Sailors. Ten sections covering Block 33-39 trait support (Professional Knowledge, Quality of Work, Climate / EO, Bearing / Character, Personal Job Accomplishment / Initiative, Teamwork, Leadership), Block 41 (Career Recommendations), Block 43 (Comments on Performance), and Block 44 (Qualifications / Achievements). The prompt scales tone by paygrade context.
-- **Chief Eval Summary (Block 40)** — NAVPERS 1616/27 Block 40 Reporting Senior Comments on Performance. Six-line max summary shaped to the v33 CHIEFEVAL update; complements the existing seven-trait Chief Eval format.
+- **FITREP - Tailored (W2-O6)** — write to the exact section of NAVPERS 1610/2 you're filling. Pick from Block 28 Command Employment, Block 29 Duties, the Block 33-39 trait support blocks (Professional Expertise, Climate / EO, Bearing / Character, Teamwork, Mission Accomplishment / Initiative, Leadership, Tactical Performance), Block 40 Career Recommendations, Block 41 Comments on Performance, or GRGB Commentary for CDR / CAPT FITREPs. Output sized to the BUPERS guidance for that section so it pastes cleanly into NAVFIT98A.
 
-See the [Navy Bullet Generator examples](/bullet-generator/examples/navy) for input / output samples for each format.
+- **EVAL - Tailored (E1-E6)** — write to the exact section of NAVPERS 1616/26. Pick from the Block 33-39 trait support blocks (Professional Knowledge, Quality of Work, Climate / EO, Bearing / Character, Personal Job Accomplishment / Initiative, Teamwork, Leadership), Block 41 Career Recommendations, Block 43 Comments on Performance, or Block 44 Qualifications / Achievements. Tone scales by paygrade so E1-E3 Sailors get growth-and-watchstanding wording while E4-E6 Sailors get petty officer leadership and program ownership.
 
-### Army OER Tailored
+- **Chief Eval Summary (Block 40)** — focused six-line Block 40 Reporting Senior Comments on Performance for the v33 CHIEFEVAL. Pairs with the existing seven-trait Chief Eval format so you can build the trait blocks and the summary block separately, both shaped to the v33 update.
 
-Three new tier-specific OER Tailored variants are now available, each targeting the correct DA Form for that grade tier and exposing the form-specific section list:
+[Try a Navy format →](https://rapidepr.com/bullets) — see the [Navy examples](/bullet-generator/examples/navy) for sample output from each format.
 
-- **OER - Tailored (Company Grade)** — DA Form 67-10-1, 2LT-CPT.
-- **OER - Tailored (Field Grade)** — DA Form 67-10-2, MAJ-LTC. Adds field-grade-specific narrative blocks (Performance Narrative IV.d.2, Operational and Broadening Assignment recommendations).
-- **OER - Tailored (Strategic / Colonel)** — DA Form 67-10-3, COL. Adds strategic-level surfaces (Performance and Potential Narrative IV.c.2, Strategic Assignments, Intermediate Rater Comments).
+### Army OER Tailored — Company, Field, and Strategic Grade
 
-All three keep the original `OER` and `OER - Tailored (legacy)` formats available so existing workflows are not affected.
+Three new tier-specific OER Tailored options replace one-size-fits-all output with tailoring that matches the actual DA Form for your grade tier:
 
-See the [Army Bullet Generator examples](/bullet-generator/examples/army) for input / output samples.
+- **OER - Tailored (Company Grade)** — DA Form 67-10-1, 2LT through CPT.
+- **OER - Tailored (Field Grade)** — DA Form 67-10-2, MAJ through LTC. Adds field-grade-specific surfaces like the Performance Narrative and Operational / Broadening Assignment recommendations.
+- **OER - Tailored (Strategic / Colonel)** — DA Form 67-10-3, COL. Adds strategic-level surfaces like the Performance and Potential Narrative and Strategic Assignment recommendations.
 
-### Air Force EPB / OPB - Tailored
+The original `OER` and `OER - Tailored` formats stay available, so existing workflows are not disrupted.
 
-Section-aware EPB / OPB Tailored format keyed to the four Major Performance Areas (Executing the Mission, Leading People, Managing Resources, Improving the Unit). Already documented in the [Air Force Bullet Generator examples](/bullet-generator/examples/usaf).
+[Try an OER Tailored format →](https://rapidepr.com/bullets) — see the [Army examples](/bullet-generator/examples/army) for sample output from each variant.
 
 ---
 
-Have a format you'd like to see added? [Reach out to us](mailto:support@rapidroutesolutions.com) — we add formats based on user demand.
+Have a format you'd like us to add? [Tell us](mailto:support@rapidroutesolutions.com) — we add formats based on what users ask for.

@@ -45,7 +45,7 @@ Through [rank/name]'s visionary guidance, a state-of-the-art web application was
 
 ## NCOER - Tailored
 
-Built for the NCOER under the six-attribute model: **Character**, **Presence**, **Intellect**, **Leads**, **Develops**, and **Achieves**. The user picks one attribute and the model shapes its three options to that attribute, generating short bullets that demonstrate the chosen behavior with action / result / impact. Outputs use NCOER bullet style (no personal pronouns, abbreviated where natural) and stay within typical NCOER comment-block character targets, with `xx` placeholders for unsupplied numbers.
+Built for the NCOER under the six-attribute model: **Character**, **Presence**, **Intellect**, **Leads**, **Develops**, and **Achieves**. Pick one attribute and the three options are shaped to demonstrate that behavior with action / result / impact. Outputs use NCOER bullet style (no personal pronouns, abbreviated where natural) and stay within typical NCOER comment-block character targets, with `xx` placeholders for any unsupplied numbers.
 
 **Example Input:**
 NCO led squad through xx training events, mentored junior Soldiers, and improved squad readiness.
@@ -57,14 +57,14 @@ o led xx-Soldier squad through xx training events; built individual development 
 
 ## OER - Tailored (Company Grade)
 
-Targets **DA Form 67-10-1** for company-grade officers (2LT-CPT). Section-aware — the user picks one of nine OER surfaces and the model shapes its three options to that section's purpose:
+Built for **DA Form 67-10-1**, company-grade officers (2LT-CPT). Section-aware — pick one of nine OER surfaces and the three options are shaped to that section's purpose:
 
 - **Character**, **Presence**, **Intellect**, **Leads**, **Develops**, **Achieves** — narrative blocks supporting the chosen Army leadership attribute
 - **Significant Duties and Responsibilities** — duty-description block
 - **Overall Performance Comments (Rater)** — Part IV.e narrative
 - **Senior Rater Comments on Potential** — Part VI narrative
 
-Outputs are written in OER narrative style (full sentences, not bullets), grounded in the rater's perspective, and quantify with `xx` when the user is vague. Promotion-recommendation language is never fabricated.
+Output is written in OER narrative style (full sentences, not bullets), grounded in the rater's perspective, and uses `xx` placeholders when specific numbers aren't supplied. Promotion-recommendation language is never fabricated.
 
 **Example Input:**
 LT served as company XO during NTC rotation, planned xx logistics packages, and trained xx new lieutenants.
@@ -76,7 +76,7 @@ LT [name] led with calm, decisive judgment during a demanding NTC rotation; coor
 
 ## OER - Tailored (Field Grade)
 
-Targets **DA Form 67-10-2** for field-grade officers (MAJ-LTC). Section-aware — extends the company-grade attribute set with field-grade-specific surfaces:
+Built for **DA Form 67-10-2**, field-grade officers (MAJ-LTC). Section-aware — extends the company-grade attribute set with field-grade-specific surfaces:
 
 - **Character (Part IV.d.1)**, **Presence**, **Intellect**, **Leads**, **Develops**, **Achieves**
 - **Performance Narrative (Part IV.d.2)**
@@ -85,7 +85,7 @@ Targets **DA Form 67-10-2** for field-grade officers (MAJ-LTC). Section-aware �
 - **Recommended Operational Assignments**, **Recommended Broadening Assignments**
 - **Significant Duties and Responsibilities**
 
-Output style emphasizes battalion- and brigade-level responsibility, joint / multinational impact, and trajectory toward command and key billet selection.
+Output emphasizes battalion- and brigade-level responsibility, joint / multinational impact, and trajectory toward command and key billet selection.
 
 **Example Input:**
 MAJ served as battalion S3 during JRTC rotation, synchronized xx maneuver companies, and built the operations rhythm that produced xx mission successes.
@@ -97,7 +97,7 @@ MAJ [name] performed superbly as battalion S3 throughout a complex JRTC rotation
 
 ## OER - Tailored (Strategic / Colonel)
 
-Targets **DA Form 67-10-3** for strategic-grade and Colonel-level officers (COL). Section-aware with a strategic emphasis:
+Built for **DA Form 67-10-3**, strategic-grade and Colonel-level officers (COL). Section-aware with a strategic emphasis:
 
 - **Character (Part IV.c.1)**
 - **Performance and Potential Narrative (Part IV.c.2)**
@@ -106,7 +106,7 @@ Targets **DA Form 67-10-3** for strategic-grade and Colonel-level officers (COL)
 - **Senior Rater Comments on Potential**
 - **Significant Duties and Responsibilities**
 
-Output style emphasizes strategic context, combined / coalition / interagency complexity, and readiness for general officer / strategic leader assignments.
+Output emphasizes strategic context, combined / coalition / interagency complexity, and readiness for general officer / strategic leader assignments.
 
 **Example Input:**
 COL commanded brigade through CTC rotation, integrated joint and multinational forces, and built a leader development program for xx field-grade officers.
