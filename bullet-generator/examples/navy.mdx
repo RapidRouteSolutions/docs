@@ -12,3 +12,92 @@ I developed a web application that streamlines the creation of military performa
 
 **Example Output:**
 Innovative Developer. Engineered a cutting-edge web application to streamline military performance report creation; integrated xx automated templates, reduced report generation time by xx%, and enhanced accuracy, enabling xx% faster dissemination of critical performance data, optimizing decision-making and bolstering mission effectiveness. (Character Count: 341)
+
+## Chief Eval
+
+Targets NAVPERS 1616/27 (CHIEFEVAL) and follows the v33 trait set. Unlike the standard three-option formats, the Chief Eval generates up to three short performance comments for each of the seven CPO guiding-principle traits: **Technical Mastery**, **Institutional Expertise**, **Professionalism**, **Integrity**, **Accountability**, **Deckplate Leadership**, and **Team Effectiveness**. The result panel groups comments by trait so each can be copied independently into the matching CHIEFEVAL block. Each comment is standalone (not a continuation), action/result/impact-oriented, and sized to fit the v33 six-line trait limit.
+
+**Example Input:**
+CMC led xx-Sailor mess through 7-month deployment, drove qualification pipeline that produced xx new watchstanders, and set new climate baseline after rebuilding mess engagement.
+
+**Example Output (Deckplate Leadership):**
+- Led xx-Sailor mess through 7-month deployment, sustaining standards and watch-team performance under high OPTEMPO.
+- Rebuilt mess engagement rhythm, restoring deckplate visibility and chief mentorship across xx work centers.
+- Drove qualification pipeline producing xx new watchstanders, expanding watchbill depth and divisional readiness.
+
+## Opening Statement
+
+Generates a concise opening kicker for the start of an enlisted Navy EVAL or comments block. Designed to set the tone in one or two short lines without consuming room needed for performance bullets. Keep it factual, mission-tied, and free of inflated praise — BUPERS guidance favors everyday language over flowery openings.
+
+**Example Input:**
+Top E5 in the work center; led INSURV prep and got xx Sailors qualified.
+
+**Example Output:**
+TOP-TIER PETTY OFFICER WHO DELIVERED INSPECTION READINESS AND BUILT BENCH STRENGTH ACROSS THE WORK CENTER.
+
+## Closing Statement
+
+Generates a closing kicker for the end of an EVAL or comments block, typically tied to advancement, retention, or next-responsibility potential. Output stays consistent with whatever recommendation tier the user supplies and avoids fabricating Early Promote / Must Promote / Promotable language unsupported by the input.
+
+**Example Input:**
+Ready for LPO and instructor duty; recommended for advancement to E6.
+
+**Example Output:**
+RECOMMENDED FOR LPO AND ADVANCEMENT TO E6 — RETAIN IN MOST DEMANDING DIVISIONAL LEADERSHIP POSITIONS.
+
+## FITREP - Tailored (W2-O6)
+
+Targets **NAVPERS 1610/2** (Fitness Report and Counseling Record) for warrant officers and officers W2-O6. Section-aware — the user picks one of 12 FITREP surfaces and the model shapes its three options to that section's BUPERS guidance and NAVFIT98A character/line caps:
+
+- **Block 28** Command Employment / Achievements
+- **Block 29** Primary / Collateral / Watchstanding Duties / PFA
+- **Block 33-39 trait support** Professional Expertise, Climate / EO, Bearing / Character, Teamwork, Mission Accomplishment / Initiative, Leadership, Tactical Performance (each generates Block 41 comment text supporting that trait, not text for the trait box itself)
+- **Block 40** Career Recommendations
+- **Block 41** Comments on Performance (full narrative, 12-16 lines, 12-point safe)
+- **Block 41 GRGB** Get Real Get Better commentary for CDR/CAPT FITREPs
+
+Output style follows BUPERS Chapter 13: bullet form for Block 41 narrative, factual openings, action / result / impact lines, `xx` placeholders for unsupplied numbers, no fabricated promotion-tier language.
+
+**Example Input:**
+LT Smith was communications officer for 12 months, led 18 Sailors, managed $2.4M radio suite, CMS custodian, OOD underway.
+
+**Section:** Primary / Collateral / Watchstanding Duties / PFA (Block 29)
+
+**Example Output (Option 1):**
+COMMO
+COMMUNICATIONS OFFICER-12; CMS CUSTODIAN-12; OOD U/W-8. Led 18 Sailors; managed $2.4M radio suite, crypto inventory, C4I maintenance, OPTASK compliance, CASREP updates, watchbill training, and deployment comms readiness.
+
+## EVAL - Tailored (E1-E6)
+
+Targets **NAVPERS 1616/26** (Evaluation Report and Counseling Record) for E1-E6 enlisted Sailors. Section-aware — the user picks one of 10 EVAL surfaces and the model shapes its three options to that section:
+
+- **Block 33-39 trait support** Professional Knowledge, Quality of Work, Climate / EO, Bearing / Character, Personal Job Accomplishment / Initiative, Teamwork, Leadership (each generates Block 43 comment text supporting that trait)
+- **Block 41** Career Recommendations
+- **Block 43** Comments on Performance (full narrative, 12-16 lines)
+- **Block 44** Qualifications / Achievements
+
+The prompt scales tone by paygrade context: E1-E3 emphasizes qualification growth, watchstanding, and reliability; E4-E6 emphasizes petty officer leadership, program ownership, and advancement potential. For E5/E6 full Block 43 output, the prompt reserves room for the post summary group reporting senior cumulative average score (PSG RSCA) without inventing a value.
+
+**Example Input:**
+E6 Jones led 14 Sailors through INSURV prep, corrected 184 discrepancies, improved work center maintenance from 72 to 96 percent, qualified 9 Sailors.
+
+**Section:** Comments on Performance (Block 43)
+
+**Example Output (Option 1, abbreviated):**
+TOP-TIER PETTY OFFICER WHO DELIVERED INSPECTION READINESS.
+- Led 14 Sailors through INSURV prep and corrected 184 discrepancies.
+- Restored maintenance discipline across work center before inspection.
+- Improved completion from 72% to 96%, strengthening equipment readiness.
+- Qualified 9 Sailors ahead of inspection, increasing watch team depth.
+- Performance shows readiness for LPO responsibility and increased scope.
+RECOMMENDED FOR INCREASED RESPONSIBILITY.
+
+## Chief Eval Summary (Block 40)
+
+Targets **NAVPERS 1616/27 Block 40** Reporting Senior Comments on Performance. Returns three options shaped to the v33 six-line Block 40 surface: a concise opening or ranking line when factual, one to three performance / leadership impact lines, optional soft breakout when supplied, and a closing potential or retention line. Returns the standard three-option result format (independent of the seven-trait Chief Eval format).
+
+**Example Input:**
+CMC led mess through deployment with deck plate impact, mentored five first-class to advance, sustained xx% retention.
+
+**Example Output (Option 1):**
+TOP CHIEF; led 80-Sailor mess through deployment; Battle E earned; recommended for SCPO.
