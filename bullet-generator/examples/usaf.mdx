@@ -3,102 +3,120 @@ title: Air Force
 description: Air Force Bullet Generator Examples
 ---
 
-## EPB/OPB - Tailored
+RapidEPR supports current Air Force OPB and EPB writing, including form-aware options for the exact section you are filling.
 
-Designed for the current EPB/OPB performance brief system, this format generates narrative statements tied to one of the four Major Performance Areas (MPAs): **Executing the Mission**, **Leading People**, **Managing Resources**, or **Improving the Unit**. Outputs run 300-350 characters, begin with a compelling action verb in past tense, and use `[rank/name]` and `[he/she]` placeholders. Ranks are abbreviated (e.g., SrA, SSgt, TSgt) and the ratee is referred to by last name only. Quantitative detail is emphasized, with `xx` placeholders where specific numbers weren't supplied.
+## Current Air Force Formats
 
-The four MPAs shape the angle of the output:
+**Form-Aware**
 
-- **Executing the Mission** — knowledge, initiative, and adaptability driving timely, high-quality results.
-- **Leading People** — cohesive teams, clear communication, and emotional intelligence.
-- **Managing Resources** — stewardship of assigned resources and accountability for outcomes.
-- **Improving the Unit** — critical thinking, innovation, and creative problem-solving.
+- **OPB Section (Officer)** — for AF Form 715 / myEval OPB sections.
+- **EPB Section (Enlisted)** — for AF Form 716 / myEval EPB sections.
+
+**General**
+
+- **EPB/OPB** — a quick standalone OPB or EPB performance statement.
+- **EPB/OPB - Tailored (Legacy)** — the previous MPA-based tailored option.
+- **ALQ** — a standalone statement focused on a selected or best-fit Airman Leadership Quality.
+
+**Other**
+
+- **Duty Description** — a present-tense OPB/EPB duty description.
+- **HLR Assessment** — a conservative Higher Level Reviewer performance statement.
+
+**Legacy**
+
+- **Traditional**, **Narrative (v2)**, and **Narrative (v1)** remain available for users who still need older styles.
+
+## If You Used the Old Names
+
+| Old name you may remember | Current option to use |
+| --- | --- |
+| EPB/OPB Statement | EPB/OPB |
+| EPB/OPB - Tailored | EPB/OPB - Tailored (Legacy) |
+| ALQ Statement | ALQ |
+| Higher Level Reviewer Assessment | HLR Assessment |
+| Duty Description | Duty Description |
+
+For the best current OPB/EPB output, use **OPB Section (Officer)** or **EPB Section (Enlisted)** when you know the exact form section.
+
+## OPB Section (Officer)
+
+Use this for officer OPB sections. Pick the section you are filling, such as Duty Description, Rater Stratification, Executing the Mission, Leading People, Managing Resources, Improving the Unit, Mandatory Comments, HLR Stratification, HLR Performance Statement, or HLR Assignment / Developmental Education Recommendation.
 
 **Example Input:**
-I took charge during a system malfunction, coordinating the repair team and restoring operations.
+Captain served as A-Flight commander, led 38 Airmen, managed $14M in flightline support equipment, and improved sortie recovery from 88% to 96% across 42 missions.
 
-**MPA:** Executing the Mission
+**Section:** Executing the Mission
 
-**Example Output:**
-[rank/name] demonstrated exceptional initiative during a critical system malfunction; [he/she] effectively coordinated xx repair personnel, oversaw the restoration of xx vital components, and ensured full operational capacity was recovered within xx hours, directly contributing to the success of xx mission objectives. (Character Count: 323)
+**Example Output (Option 1):**
+Directed A-Flight operations for 38 Airmen across 42 sortie-recovery missions, managing $14M in flightline support equipment and raising recovery performance from 88% to 96% while strengthening squadron execution under compressed timelines.
 
-## EPB/OPB Statement
+## EPB Section (Enlisted)
 
-Designed for the new EPB system, this format aims to create outputs close to 350 characters, focusing on the user's achievements and their impact. While it sometimes goes over the 350-character limit, I'm working to make it fit better. This option is a great starting point but might need some tweaks by the user.
-
-**Example Input (Variation 2):**
-I developed a web application that streamlines the creation of military performance reports.
-
-**Example Output:**
-[rank/name] championed the creation of a game-changing web application; [he/she] transformed the military performance report creation process, resulting in a remarkable xx% reduction in processing time, an impressive xx% increase in accuracy, and a significant xx% improvement in personnel resource management. (Character Count: 310)
-
-## HLR Assessment
-
-Produces three distinct Higher Level Reviewer (HLR) Assessment options for USAF Enlisted Performance Briefs, each capped at 250 characters. Written in the commander's voice with a tone of strong praise, each option emphasizes achievements, leadership, and potential for advancement or education. Uses `[rank/name]` and `[he/she]`/`[him/her]` placeholders when a name and rank aren't provided, and uses `xx` for any missing quantifiable figures. Pronouns "I" and "we" are never used.
+Use this for enlisted EPB sections. Pick the section you are filling and select the rated grade so the output stays appropriate for the Airman's level. Sections include Duty Description, the four Major Performance Areas, Mandatory Comments, MSgt-SMSgt Stratification, Future Roles, HLR Comments, and CMSgt Higher Responsibility Support.
 
 **Example Input:**
-Airman led multiple projects and improved team efficiency.
+Appointed as A-Flight's lead trainer; completed 43 core training tasks for 10 Airmen and improved the flight's training depth.
 
-**Example Output:**
+**Rated Grade:** SSgt
 
-**Option 1:** [rank/name]'s dynamic leadership drove key projects to success, boosting team efficiency and mission impact; [he/she] is strongly recommended for further leadership opportunities and advancement.
+**Section:** Leading People
 
-**Option 2:** [rank/name] excelled as a project lead, elevating productivity and team cohesion; [he/she] is primed for advanced assignments and continued professional growth.
+**Example Output (Option 1):**
+Trained 10 Airmen through 43 core tasks as A-Flight lead trainer, building qualification depth and strengthening section proficiency while giving supervisors a measurable training baseline for operational tasking.
 
-**Option 3:** Exceptional project management by [rank/name] resulted in xx% efficiency gains; [he/she] is a standout performer poised for expanded responsibilities and senior NCO development.
+## EPB/OPB
+
+Use this when you need one quick performance statement and do not need to target a specific form section.
+
+**Example Input:**
+Maintainer led night-shift repair effort that returned two aircraft to service and prevented mission delay.
+
+**Example Output (Option 1):**
+Led night-shift repair effort for 2 aircraft, coordinating xx maintainers and closing xx maintenance actions to prevent mission delay and restore sortie availability for next-day tasking.
+
+## EPB/OPB - Tailored (Legacy)
+
+This is the previous MPA-based tailored option. It is still useful if your normal workflow is to pick one of the four Major Performance Areas: Executing the Mission, Leading People, Managing Resources, or Improving the Unit.
+
+**Example Input:**
+Airman created a tracker for overdue training and helped supervisors close the backlog.
+
+**Area:** Improving the Unit
+
+**Example Output (Option 1):**
+Built training tracker for xx overdue requirements, helping supervisors close xx suspense items in xx days and reducing missed deadlines by xx% while giving the section a repeatable process for future training cycles.
+
+## ALQ
+
+Use this when you want the statement to focus on an Airman Leadership Quality such as Initiative, Communication, Stewardship, Accountability, Decision Making, or Innovation. The output does not print the ALQ label; it gives you paste-ready statement text.
+
+**Example Input:**
+Communication; briefed new aircraft process to maintenance team.
+
+**Example Output (Option 1):**
+Briefed xx maintainers on a new aircraft process across xx training sessions, reducing repeat questions by xx% and improving handoff quality for xx scheduled maintenance actions.
 
 ## Duty Description
 
-Generates three distinct EPR/OPR duty descriptions from a single input. Each output is capped at 450 characters (including spaces and punctuation) and follows the Air Force structure: primary duty/position first, 2-3 key responsibilities or programs led, quantified personnel and resources managed, and a closing statement on broader mission contribution. Use `xx` for any missing numbers. For 365-day extended deployments, a TDY duty description is used instead. For commanders, total force assigned and a brief unit mission description are included. For colonels in CSAF-designated wing equivalent positions, outputs begin with "Wing Equivalent."
+Use this for OPB/EPB duty description text. Duty descriptions are role and scope statements, not accomplishment bullets. Include position, mission, personnel supervised or supported, equipment, budget, programs, and special duty context when you have it.
 
 **Example Input:**
-Airman is an F-15E Lead Weapons System Officer overseeing flying operations; supervises 75 aircrew, 20 support staff, 25 aircraft worth $1.4B.
+Assistant director of operations for a flying squadron, 75 aircrew, 25 aircraft, daily flying operations and training.
 
-**Example Output:**
+**Example Output (Option 1):**
+Serves as Assistant Director of Operations for a flying squadron of 75 aircrew and 25 aircraft. Coordinates daily flying operations, training execution, scheduling, standardization support, mission planning, aircrew readiness, and cross-functional synchronization with maintenance and group staff.
 
-1. Combat ready, worldwide deployable Lead Weapons System Officer driving all F-15E mission sets. Directs commander's priorities—standardization, safety, security, morale. Executes daily flying ops for 75 aircrew, 20 support, 25 aircraft ($1.4B). Integrates joint/multinational forces, supports 24/7 readiness.
+## HLR Assessment
 
-2. Lead Weapons System Officer charged with full-spectrum F-15E ops. Manages key programs—evaluation, safety, morale initiatives. Responsible for 75 crew, 20 support, 25 jets valued at $1.4B. Ensures seamless operations, delivers decisive airpower, advances joint mission objectives.
+Use this for a Higher Level Reviewer performance statement. Keep the input factual and tied to performance. If you need stratification, promotion recommendation boxes, or mandatory comments, use the appropriate OPB or EPB form-aware section instead.
 
-3. Principal F-15E Weapons System Officer—drives command programs, safety and readiness initiatives. Oversees daily ops for 75 aviators, 20 staff, 25 aircraft ($1.4B). Spearheads joint integration and mission execution, ensuring squadron meets rapid response and combat requirements.
+**Example Input:**
+Led squadron inspection prep, corrected 64 findings, and improved program compliance from 78% to 96%.
 
+**Example Output (Option 1):**
+Led inspection recovery across 64 findings and raised program compliance from 78% to 96%, giving the unit a measurable readiness gain and a stronger baseline for follow-on inspections.
 
-## ALQ Statement
+## Legacy Air Force Formats
 
-This format is made for the Air Force's new ALQ-based review system. It creates statements that highlight an Airman's actions related to the four Major Performance Areas (MPAs). It also suggests which MPA the output might fit best with. The goal is to keep outputs between 150-250 characters, but sometimes they might be longer.
-
-**Example Input (Variation 2):**
-I developed a web application that streamlines the creation of military performance reports.
-
-**Example Output:**
-By leveraging [his/her] technical skills and innovative thinking, [rank/name] designed and implemented a web application that revolutionized the creation of military performance reports, enhancing efficiency and productivity across the unit. (Improving the Unit) (Character Count: 241)
-
-## Narrative v2
-
-This is the second version of a narrative style I made before getting more details on the new EPBs. It doesn't use the user's rank, name, or personal pronouns. The goal is for outputs to be between 200-300 characters. Keeping this option lets users see different styles and pick what they like best.
-
-**Example Input (Variation 2):**
-I developed a web application that streamlines the creation of military performance reports.
-
-**Example Output:**
-Created a user-friendly web application that revolutionized military performance report creation; decreased processing time by xx%, minimized errors by xx%, and empowered leaders with real-time data analytics, optimizing resource allocation and bolstering mission effectiveness. (Character Count: 278)
-
-## Narrative v1
-
-This was the first version of the narrative style I made. Like the second version, it doesn't use the user's rank, name, or personal pronouns. Outputs aim to be between 200-300 characters. It's another option for users to check out and compare.
-
-**Example Input (Variation 2):**
-I developed a web application that streamlines the creation of military performance reports.
-
-**Example Output:**
-Developed a cutting-edge web application that streamlined the creation of military performance reports, optimizing efficiency and saving countless man-hours. This innovative solution revolutionized the reporting process, enhancing accuracy and timeliness, and significantly improving the overall productivity of xxx personnel. (Character Count: 326)
-
-## Traditional
-
-This is the classic style we're all familiar with. It takes user input and shortens it using abbreviations and shorthand, following the well-known impact-action-result format. Even though the Air Force is moving away from this style, there might still be times when it's useful, so it's still an option here.
-
-**Example Input (Variation 2):**
-I developed a web application that streamlines the creation of military performance reports.
-
-**Example Output:**
-Dev'd web app streamlining mil perf rpt creation; reduces time & effort--incr efficiency & accuracy of eval process (Character Count: 115)
+**Traditional**, **Narrative (v2)**, and **Narrative (v1)** are kept for continuity. For current OPB/EPB work, start with the form-aware OPB or EPB options above.
