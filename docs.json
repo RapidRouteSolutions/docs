@@ -56,6 +56,13 @@
             ]
           },
           {
+            "group": "Rapid Regs",
+            "icon": "book-open",
+            "pages": [
+              "rapid-regs/index"
+            ]
+          },
+          {
             "group": "Military Units",
             "icon": "users",
             "pages": [
