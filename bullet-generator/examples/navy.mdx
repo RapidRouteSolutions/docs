@@ -3,41 +3,61 @@ title: Navy
 description: EVAL, FITREP and CHIEFEVAL formats with example inputs and drafts.
 ---
 
-# Navy evaluation examples
+## Navy evaluation examples
 
 Choose the format for the Sailor's report and grade. Keep each person's
 drafts in a separate [package](/rapid-generator).
+
+These examples were generated in RapidEPR on October 17, 2026 with fictional
+inputs and Moderate variation. Each example shows one complete returned option,
+except Chief Eval, which shows all trait groups. Review added claims and replace
+placeholders such as `xx` with verified facts before use.
 
 ## EVAL - Tailored (E1-E6)
 
 Use this format for NAVPERS 1616/26. Select a trait, Career Recommendations,
 Comments on Performance or Qualifications / Achievements.
 
+| Setting        | Selection                          |
+| -------------- | ---------------------------------- |
+| Variation      | Moderate                           |
+| Area / Section | Comments on Performance (Block 43) |
+
 Input:
 
-> E6 Jones led 14 Sailors through INSURV preparation. Corrected 184 discrepancies,
-> raised maintenance completion from 72% to 96% and qualified nine Sailors.
+> E6 Jones led 14 Sailors through INSURV preparation. Corrected 184 discrepancies, raised maintenance completion from 72% to 96% and qualified nine Sailors.
 
-Draft excerpt for Comments on Performance:
+Output (Option 1):
 
-> Led 14 Sailors through INSURV preparation, correcting 184 discrepancies and
-> raising maintenance completion from 72% to 96%. Qualified nine Sailors
-> before the inspection.
+> - Led 14 Sailors through INSURV preparation, aligning xx workstreams for inspection readiness.
+> - Corrected 184 INSURV discrepancies across xx maintenance actions, closing documented gaps.
+> - Raised completion from 72% to 96% across xx tracked maintenance actions.
+> - Qualified 9 Sailors across xx watchstations, expanding work-center qualification depth.
+> - Coordinated xx inspection checks with 14 Sailors, advancing INSURV corrective work.
+> - Tracked 184 discrepancies through xx follow-up reviews, sustaining closure accountability.
+> - Applied 72%-to-96% maintenance gains across xx systems during INSURV preparation.
+> - Trained 9 Sailors through xx qualification events, building depth for INSURV requirements.
+> - Closed xx maintenance actions across xx systems, reinforcing 96% completion results.
+> - Managed INSURV preparation with 14 Sailors and 184 corrections, documenting team output.
 
 ## FITREP - Tailored (W2-O6)
 
 Use this format for NAVPERS 1610/2. Select the section you are writing,
 such as duties, a trait, career recommendations or comments on performance.
 
+| Setting        | Selection                                              |
+| -------------- | ------------------------------------------------------ |
+| Variation      | Moderate                                               |
+| Area / Section | Primary / Collateral / Watchstanding Duties (Block 29) |
+
 Input:
 
-> LT Smith served as communications officer for 12 months, led 18 Sailors
-> and managed a $2.4 million radio suite. Also served as CMS custodian.
+> LT Smith served as communications officer for 12 months, led 18 Sailors and managed a $2.4 million radio suite. Also served as CMS custodian.
 
-Draft excerpt for duties:
+Output (Option 1):
 
-> COMMUNICATIONS OFFICER-12; CMS CUSTODIAN-12. Led 18 Sailors and managed
-> a $2.4 million radio suite.
+> COMMO
+> COMMUNICATIONS OFFICER-12; CMS CUSTODIAN. Led 18 Sailors; managed $2.4M radio suite and CMS accountability, coordinating xx maintenance actions, xx circuit checks, xx inventory items, and communications support for xx command evolutions.
 
 ## Chief Eval
 
@@ -45,67 +65,113 @@ Use this format for comments grouped under the seven CHIEFEVAL traits:
 Technical Mastery, Institutional Expertise, Professionalism, Integrity,
 Accountability, Deckplate Leadership and Team Effectiveness.
 
+An empty trait group displays "No supporting accomplishment supplied." Add
+relevant accomplishments to generate text for that trait; do not copy the
+empty-group message into an evaluation.
+
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
+
 Input:
 
-> Led the Chief's Mess through a seven-month deployment. Mentored 12
-> first-class petty officers and helped eight qualify as new watchstanders.
+> Led the Chief's Mess through a seven-month deployment. Mentored 12 first-class petty officers and helped eight qualify as new watchstanders.
 
-Draft for Deckplate Leadership:
+Output (all seven trait groups):
 
-> Mentored 12 first-class petty officers through a seven-month deployment,
-> helping eight qualify as new watchstanders.
+### Technical Mastery
 
-You can copy comments from each trait group separately.
+> Helped 8 Sailors qualify as watchstanders during a 7-month deployment, expanding watchbill capability and supporting operational readiness.
+
+### Institutional Expertise
+
+> No supporting accomplishment supplied.
+
+### Professionalism
+
+> Mentored 12 first-class petty officers during a 7-month deployment, strengthening professional growth and future leadership capacity.
+
+### Integrity
+
+> No supporting accomplishment supplied.
+
+### Accountability
+
+> No supporting accomplishment supplied.
+
+### Deckplate Leadership
+
+> Led the Chief's Mess through a 7-month deployment, sustaining senior-enlisted leadership and supporting Sailors throughout operations.
+
+### Team Effectiveness
+
+> No supporting accomplishment supplied.
 
 ## Chief Eval Summary (Block 40)
 
 Use this format for the Reporting Senior Comments on Performance section
 of NAVPERS 1616/27.
 
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
+
 Input:
 
-> Led the Chief's Mess through deployment, mentored five first-class petty
-> officers who advanced and sustained 95% retention.
+> Led the Chief's Mess through deployment, mentored five first-class petty officers who advanced and sustained 95% retention.
 
-Draft excerpt:
+Output (Option 1):
 
-> Led the Chief's Mess through deployment and mentored five first-class petty
-> officers who advanced. Sustained 95% retention during the reporting period.
+> TRUSTED CHIEF'S MESS LEADER THROUGH DEPLOYMENT.
+> Led the Mess through deployment, sustaining unity, standards, and focus amid operational demands.
+> Mentored five First Class Petty Officers; all five advanced, strengthening the command's next generation of enlisted leaders.
+> Sustained 95% retention while prioritizing Sailor development and mission readiness.
+> Retain and assign to demanding CPO Mess leadership roles.
 
 ## Eval Bullet
 
 Use this format for a standalone enlisted EVAL statement.
 
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
+
 Input:
 
-> Built a maintenance tracker for three work centers and cut weekly
-> report preparation from four hours to one.
+> Built a maintenance tracker for three work centers and cut weekly report preparation from four hours to one.
 
-Draft:
+Output (Option 1):
 
-> Built a maintenance tracker for three work centers, cutting weekly report
-> preparation from four hours to one and returning three hours to maintenance work.
+> Innovative Technician. Built and implemented a maintenance tracker serving three work centers, streamlining weekly reporting and cutting preparation time from four hours to one. Saved three hours—or 75%—each week, improved visibility of maintenance actions, and enabled more timely oversight of work essential to equipment readiness and mission execution.
 
 ## Opening Statement
 
 Provide the performance or ranking you want to introduce.
 
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
+
 Input:
 
 > Top E5 in the work center. Led INSURV preparation and helped six Sailors qualify.
 
-Draft:
+Output (Option 1):
 
-> TOP E5 IN THE WORK CENTER. LED INSURV PREPARATION AND HELPED SIX SAILORS QUALIFY.
+> TOP E-5 IN THE WORK CENTER, [Rank/Name] DROVE INSURV PREPARATIONS AND QUALIFIED SIX SAILORS—A MISSION-READY LEADER WHO ELEVATES THE ENTIRE TEAM!
 
 ## Closing Statement
 
 Provide your advancement and assignment recommendations.
 
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
+
 Input:
 
 > Recommended for advancement to E6 and assignment as an LPO or instructor.
 
-Draft:
+Output (Option 1):
 
-> RECOMMENDED FOR ADVANCEMENT TO E6 AND ASSIGNMENT AS AN LPO OR INSTRUCTOR.
+> [Rank/Name], [Rating] is ready to lead at the next level—advance to E6 and assign as an LPO or instructor to amplify mission readiness and Sailor development.
