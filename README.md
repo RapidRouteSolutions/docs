@@ -1,44 +1,33 @@
-# Mintlify Starter Kit
+# RapidEPR public documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+Mintlify user guides for [RapidEPR](https://rapidepr.com). The application source is
+[RapidRouteSolutions/rapidepr-sst-ion](https://github.com/RapidRouteSolutions/rapidepr-sst-ion);
+this repository does not contain the app or the RapidRegs ingestion service.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Preview and validate
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+Use the Mintlify CLI with a supported Node.js version:
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
+```bash
+npx mint dev
+npx mint validate
+npx mint broken-links
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+`docs.json` controls navigation. Pages are MDX; internal page links start at the
+documentation root, while app links use `https://rapidepr.com/...`. Do not use
+app-relative links such as `/support` inside the docs site.
 
-```
-mint dev
-```
+## Maintenance
 
-View your local preview at `http://localhost:3000`.
+Guides were reviewed against app commit `b4f568c` on 2026-10-17. This is a source
+alignment date, not a claim about production deployment.
 
-## Publishing changes
+For UI changes, check `packages/web/lib/menu-list.ts`, the generator and settings
+routes. Format labels/options come from `lib/generator-formats.ts` and the core
+format registry. Check credit/deletion claims against backend behavior, not old
+marketing copy. Prices at Stripe checkout are authoritative.
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
-- [Mintlify community](https://mintlify.com/community)
+Examples illustrate writing styles; they are not current generated-output
+fixtures or guarantees of compliance. Keep historical release entries dated,
+and do not invent a release date from the date a guide was edited.
