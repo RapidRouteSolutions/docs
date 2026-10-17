@@ -32,3 +32,9 @@ handlers. Keep release dates tied to the release they describe.
 
 Examples should use the facts supplied in their input. Keep format names as
 they appear in the app.
+
+Keep output examples faithful to the selected format. Preserve required citation
+openings, closings, capitalization and complete output structure. Apply prose
+cleanup to the explanation without replacing a complete citation with an excerpt.
+Check examples against their prompt files. Call an example model-generated only
+when it comes from an actual recorded generation.
