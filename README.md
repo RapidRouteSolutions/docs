@@ -1,44 +1,40 @@
-# Mintlify Starter Kit
+# RapidEPR documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+User guides for [RapidEPR](https://rapidepr.com), built with Mintlify.
+The application code lives in
+[rapidepr-sst-ion](https://github.com/RapidRouteSolutions/rapidepr-sst-ion).
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Preview and validate
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
+```bash
+npx mint dev
+npx mint validate
+npx mint broken-links
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+`docs.json` controls navigation. Pages use MDX. Internal links start at the
+documentation root. Links to the app use `https://rapidepr.com/...`.
 
-```
-mint dev
-```
+## Writing and maintenance
 
-View your local preview at `http://localhost:3000`.
+Write for the person using RapidEPR. State prices, features and instructions
+directly. Explain what a feature helps them do. Remove retired features,
+old navigation names and commentary about how the documentation was reviewed.
 
-## Publishing changes
+Use the [unslop skill](https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md)
+when writing public content. Use plain words, sentence case headings and short
+sentences. Avoid promotional claims, repeated caveats and unnecessary bold text.
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+Check navigation against `packages/web/lib/menu-list.ts` and the generator
+and settings pages. Check formats against `lib/generator-formats.ts` and the
+core format registry. Verify billing and account instructions against their
+handlers. Keep release dates tied to the release they describe.
 
-## Need help?
+Examples should use the facts supplied in their input. Keep format names as
+they appear in the app.
 
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
-- [Mintlify community](https://mintlify.com/community)
+Keep output examples faithful to the selected format. Preserve required citation
+openings, closings, capitalization and complete output structure. Apply prose
+cleanup to the explanation without replacing a complete citation with an excerpt.
+Check examples against their prompt files. Call an example model-generated only
+when it comes from an actual recorded generation.

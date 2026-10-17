@@ -1,167 +1,208 @@
 ---
 title: Army
-description: Army Bullet Generator Examples
+description: NCOER and OER formats with example inputs and drafts.
 ---
 
-RapidEPR supports both quick Army statements and form-aware NCOER/OER options. The form-aware options are the best choice when you know the rated Soldier's grade tier and the section you are filling.
+## Army evaluation examples
 
-## Current Army Formats
+Choose the format for the Soldier's grade and the section you are writing.
+Keep their drafts in a [package](/rapid-generator) named for the Soldier
+and rating period.
 
-**Form-Aware**
-
-- **NCOER (SGT)** — SGT / direct-level NCOER sections.
-- **NCOER (SSG-1SG)** — SSG, SFC, MSG, and 1SG organizational-level NCOER sections.
-- **NCOER (CSM/SGM)** — CSM and SGM strategic-level NCOER sections.
-- **OER (Company Grade)** — DA Form 67-10-1, 2LT through CPT.
-- **OER (Field Grade)** — DA Form 67-10-2, MAJ through LTC.
-- **OER (Strategic / Colonel)** — DA Form 67-10-3, COL.
-
-**General**
-
-- **NCOER** — quick NCOER bullet.
-- **NCOER - Tailored (Legacy)** — the previous broad NCOER tailored option.
-- **OER** — quick OER narrative statement.
-
-**Other**
-
-- **Senior Rater Comment**
-- **Award Achievement**
-
-## If You Used the Old Names
-
-| Old name you may remember | Current option to use |
-| --- | --- |
-| NCOER - Tailored | NCOER - Tailored (Legacy), or use NCOER (SGT), NCOER (SSG-1SG), or NCOER (CSM/SGM) for better results |
-| OER - Tailored | OER (Company Grade), OER (Field Grade), or OER (Strategic / Colonel) |
-| NCOER | NCOER |
-| OER | OER |
-| Senior Rater | Senior Rater Comment |
-| Award Achievement | Award Achievement |
+These examples were generated in RapidEPR on October 17, 2026 with fictional
+inputs and Moderate variation. Each example shows one complete returned option. Review added claims and replace
+placeholders such as `xx` with verified facts before use.
 
 ## NCOER (SGT)
 
-Use this for SGT NCOER support. Pick the section you are writing for: Character, Presence, Intellect, Leads, Develops, Achieves, or Rater Overall Performance. The output uses NCOER bullet style and includes `xx` placeholders when numbers are missing.
+Use this format for SGT evaluations. Select Character, Presence, Intellect,
+Leads, Develops, Achieves or Overall Performance Comments.
 
-**Example Input:**
-SGT led a 4-Soldier team through 18 training events, certified 3 Soldiers, and improved squad readiness.
+| Setting        | Selection |
+| -------------- | --------- |
+| Variation      | Moderate  |
+| Area / Section | Leads     |
 
-**Section:** Rater Overall Performance
+Input:
 
-**Example Output (Option 1):**
-o led 4-Soldier team through 18 training events; certified 3 Soldiers and improved squad readiness by xx%, prepared for increased team leader responsibility
+> Led a four-Soldier team through 18 training events and certified three Soldiers.
+
+Output (Option 1):
+
+> o led four-Soldier team through 18 training events; certified 3 Soldiers and strengthened team readiness for assigned missions
 
 ## NCOER (SSG-1SG)
 
-Use this for SSG, SFC, MSG, and 1SG NCOER support. Select the rated rank and the section so the tone matches the Soldier's level of responsibility.
+Use this format for SSG, SFC, MSG and 1SG evaluations. Select the rated rank
+and report section.
 
-**Example Input:**
-SSG managed platoon maintenance tracker, trained 12 Soldiers, closed 27 overdue services, and improved equipment readiness from 82% to 94%.
+| Setting        | Selection |
+| -------------- | --------- |
+| Variation      | Moderate  |
+| Area / Section | Achieves  |
+| Rated Rank     | SFC       |
 
-**Rated Rank:** SSG
+Input:
 
-**Section:** Achieves
+> Managed the platoon maintenance tracker, trained 12 Soldiers and closed 27 overdue services. Equipment readiness rose from 82% to 94%.
 
-**Example Output (Option 1):**
-o managed platoon tracker for 27 overdue services; trained 12 Soldiers and raised equipment readiness from 82% to 94% during reporting period
+Output (Option 1):
+
+> o managed platoon maintenance tracker and closed 27 overdue services; raised equipment readiness from 82% to 94%
 
 ## NCOER (CSM/SGM)
 
-Use this for CSM and SGM evaluations. Sections include Character, Attributes and Competencies Narrative, and Rater Overall Performance. Output is broader and more strategic than lower-grade NCOER bullets.
+Use this format for CSM and SGM evaluations. Sections include Character,
+Attributes and Competencies Narrative, and Overall Performance Comments.
 
-**Example Input:**
-CSM advised battalion command team during deployment, synchronized 6 companies, mentored 18 senior NCOs, and improved sponsorship completion from 70% to 96%.
+| Setting        | Selection                             |
+| -------------- | ------------------------------------- |
+| Variation      | Moderate                              |
+| Area / Section | Attributes and Competencies Narrative |
+| Rated Rank     | CSM                                   |
 
-**Rated Rank:** CSM
+Input:
 
-**Section:** Attributes and Competencies Narrative
+> Advised the battalion command team during deployment, coordinated six companies and mentored 18 senior NCOs. Sponsorship completion rose from 70% to 96%.
 
-**Example Output (Option 1):**
-Advised battalion command team across 6 deployed companies while mentoring 18 senior NCOs and raising sponsorship completion from 70% to 96%. Strengthened standards, leader development, and disciplined execution across the formation.
+Output (Option 1):
+
+> The CSM advised the battalion command team throughout deployment, translating commander priorities into synchronized NCO support across six companies and maintaining focus on personnel readiness. By coordinating 18 senior NCOs and reinforcing sponsorship accountability through xx leader touchpoints, the CSM helped raise sponsorship completion from 70% to 96%, a 26-percentage-point improvement. This measurable gain strengthened incoming Soldier integration and established a consistent battalion process for tracking sponsor assignment, follow-through, and unresolved actions across xx deployment milestones.
 
 ## NCOER
 
-Use this for a quick NCOER-style bullet when you do not need a specific form-aware section.
+Use this format for a standalone NCOER bullet.
 
-**Example Input:**
-NCO developed a training tracker that helped supervisors close overdue requirements.
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
 
-**Example Output:**
-o created training tracker; closed xx overdue requirements and improved section completion by xx% across xx Soldiers
+Input:
+
+> Created a training tracker and helped supervisors close 35 overdue requirements for 20 Soldiers.
+
+Output (Option 1):
+
+> o created a training tracker and helped supervisors close 35 overdue requirements for 20 Soldiers; improved compliance visibility and readiness by xx%.
 
 ## NCOER - Tailored (Legacy)
 
-This is the previous broad NCOER tailored option. It is still available for users who prefer the older workflow, but the grade-specific NCOER formats above are usually more precise.
+Select an area of performance to guide the bullet.
 
-**Example Input:**
-NCO led squad through field training and mentored junior Soldiers.
+| Setting        | Selection |
+| -------------- | --------- |
+| Variation      | Moderate  |
+| Area / Section | Leads     |
 
-**Section:** Leads
+Input:
 
-**Example Output (Option 1):**
-o led xx-Soldier squad through xx field events; coached xx junior Soldiers and improved team execution across xx mission tasks
+> Led a nine-Soldier squad through four field exercises and coached two new team leaders.
+
+Output (Option 1):
+
+> o led a nine-Soldier squad through four field exercises and coached two team leaders; strengthened leadership depth and readiness for xx missions
 
 ## OER (Company Grade)
 
-Built for **DA Form 67-10-1**, company-grade officers (2LT-CPT). Section-aware options include Character, Presence, Intellect, Leads, Develops, Achieves, Significant Duties and Responsibilities, Overall Performance Comments, and Senior Rater Comments on Potential.
+Use this format for DA Form 67-10-1, covering 2LT through CPT and WO1/CW2. Choose the
+section you need, such as Leads, Achieves or Senior Rater Comments on Potential.
 
-**Example Input:**
-LT served as company XO during NTC rotation, planned 14 logistics packages, and trained 6 new lieutenants.
+| Setting        | Selection |
+| -------------- | --------- |
+| Variation      | Moderate  |
+| Area / Section | Leads     |
 
-**Section:** Leads
+Input:
 
-**Example Output (Option 1):**
-LT [name] led with calm, decisive judgment during a demanding NTC rotation; coordinated 14 logistics packages across supported platoons, built training plans for 6 new lieutenants, and reinforced standards that improved company-level execution.
+> Served as company XO during an NTC rotation, coordinated 14 logistics packages and trained six new lieutenants.
+
+Output (Option 1):
+
+> As company XO during an NTC rotation, the officer aligned six new lieutenants and company staff to coordinate 14 logistics packages, communicating priorities across the formation and sustaining the commander’s plan through demanding operations.
 
 ## OER (Field Grade)
 
-Built for **DA Form 67-10-2**, field-grade officers (MAJ-LTC). It adds field-grade surfaces such as Performance Narrative, Operational Assignment recommendations, and Broadening Assignment recommendations.
+Use this format for DA Form 67-10-2, covering MAJ, LTC and CW3 through CW5. Sections include
+Performance Narrative and assignment recommendations.
 
-**Example Input:**
-MAJ served as battalion S3 during JRTC rotation, synchronized 5 maneuver companies, and built the operations rhythm that produced 12 mission successes.
+| Setting        | Selection                           |
+| -------------- | ----------------------------------- |
+| Variation      | Moderate                            |
+| Area / Section | Performance Narrative (Part IV.d.2) |
 
-**Section:** Performance Narrative (Part IV.d.2)
+Input:
 
-**Example Output (Option 1):**
-MAJ [name] performed superbly as battalion S3 throughout a complex JRTC rotation; synchronized 5 maneuver companies, integrated enablers across warfighting functions, and built an operations rhythm that produced 12 mission successes and positioned the battalion for follow-on tasking.
+> Served as battalion S3 during a JRTC rotation. Synchronized five maneuver companies through 12 missions.
+
+Output (Option 1):
+
+> Served as battalion S3 during a demanding Joint Readiness Training Center rotation, integrating planning and current-operations efforts to synchronize five maneuver companies across 12 missions. Translated the commander’s intent into coordinated tasks, timelines, and decision points, maintaining a shared operational picture as requirements changed and enabling company teams to execute within the battalion’s scheme of maneuver. Aligned staff inputs and company-level requirements to support timely decisions and the effective employment of the formation throughout the rotation. The synchronization of 12 missions across five maneuver companies demonstrated the ability to manage complexity, maintain focus on the mission, and connect planning with execution at battalion echelon. Applied sound field-grade judgment in a high-pressure training environment and demonstrated the operational discipline, communication, and planning ability required for increased responsibility.
 
 ## OER (Strategic / Colonel)
 
-Built for **DA Form 67-10-3**, strategic-grade and Colonel-level officers. It emphasizes strategic context, large-formation leadership, combined / joint / interagency complexity, and potential for senior strategic responsibility.
+Use this format for DA Form 67-10-3. Include the scope of command,
+partnerships and results.
 
-**Example Input:**
-COL commanded brigade through CTC rotation, integrated joint and multinational forces, and built a leader development program for 24 field-grade officers.
+| Setting        | Selection                                         |
+| -------------- | ------------------------------------------------- |
+| Variation      | Moderate                                          |
+| Area / Section | Performance and Potential Narrative (Part IV.c.2) |
 
-**Section:** Performance and Potential Narrative (Part IV.c.2)
+Input:
 
-**Example Output (Option 1):**
-COL [name] delivered exceptional brigade command through a complex CTC rotation, integrating joint and multinational forces across warfighting functions and building a leader development program that prepared 24 field-grade officers for follow-on command. Strategic judgment, presence, and proven ability to lead at echelon support continued growth toward senior responsibility.
+> Commanded a brigade through a CTC rotation with joint and multinational forces. Established a leader development program for 24 field-grade officers.
+
+Output (Option 1):
+
+> The colonel commanded a Brigade Combat Team through a demanding Combat Training Center rotation, integrating joint and multinational forces to assess the formation against operationally relevant conditions. The officer synchronized brigade training and external partner participation, building shared understanding across organizational and national boundaries while preserving unity of effort. The rotation provided a rigorous measure of collective readiness and interoperability; the resulting assessment identified xx strengths and xx areas for continued development, informing the brigade’s follow-on training priorities and the higher headquarters’ readiness picture. In an environment marked by competing requirements and incomplete information, the colonel maintained focus on the mission, aligned subordinate leaders around clear priorities, and translated training observations into actionable lessons for the formation and its partners. The officer also established a leader development program for 24 field-grade officers, creating a deliberate structure for professional growth, leadership preparation, and broader understanding of the responsibilities required at the next echelon. The program connected individual development to the brigade’s operational demands and strengthened the formation’s capacity to develop capable leaders for future command and staff roles.
+>
+> These accomplishments demonstrated vision, disciplined execution, and the ability to build consensus across echelons and with joint and multinational partners. The colonel strengthened interoperability through practical combined training and treated leader development as an enduring institutional responsibility rather than a one-time event. The officer’s record showed the judgment to lead change, capitalize on unified action partners, and sustain ethical mission accomplishment while balancing readiness demands with long-term force development. The colonel demonstrated clear potential for broader responsibility and should be considered for increasingly demanding assignments that expand enterprise-level experience, including a joint or multinational staff role. With continued performance at this level, the officer is capable of succeeding in brigade command and progressing toward general-officer responsibility; future evaluations should assess the measurable effects of the development program and the durability of interoperability gains across subsequent training cycles.
 
 ## OER
 
-Use this for a quick OER-style narrative when you do not need a grade-tiered form section.
+Use this format for a standalone OER narrative.
 
-**Example Input:**
-Officer built a digital tracker that reduced staff reporting delays.
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
 
-**Example Output:**
-[name] applied sound judgment and technical skill to build a digital tracker that reduced staff reporting delays by xx%, improved visibility across xx sections, and gave commanders a clearer tool for managing recurring requirements.
+Input:
+
+> Built a reporting tracker that reduced average staff reporting delays from three days to one across six sections.
+
+Output (Option 1):
+
+> [name] demonstrated strong intellect by designing and implementing a reporting tracker that reduced average staff reporting delays from three days to one across six sections—a 67% reduction. The streamlined process improved the timeliness and consistency of staff updates, enabling faster decisions and better synchronization of resources in support of the Army mission. (Intellect)
 
 ## Senior Rater Comment
 
-Use this for senior-rater potential language. Provide factual rankings, comparison groups, and recommendation context when you have them. RapidEPR will use placeholders instead of inventing unsupported rankings or promotion language.
+Include the comparison group, ranking and recommendations you can support.
 
-**Example Input:**
-Top 10% of 24 captains I senior rate; ready for company command and resident PME.
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
 
-**Example Output:**
-Top 10% of 24 captains I senior rate. Ready for company command and resident PME; continue to place in positions requiring disciplined leadership, sound judgment, and measurable results.
+Input:
+
+> Top 10% of the 24 captains I senior rate. Ready for company command and resident PME.
+
+Output (Option 1):
+
+> [rank/name] ranks in the top 10% of the 24 captains I senior rate. Ready now for company command and resident PME, they have the potential to excel in positions of greater responsibility. Select for command and PME at the earliest opportunity.
 
 ## Award Achievement
 
-Use this for Army award achievement narratives, such as DA Form 638 Block 21. Include the achievement, scope, dates if relevant, measurable impact, and mission effect.
+Use this format for an Army award achievement narrative. Include the action
+and its result.
 
-**Example Input:**
-Soldier built tracker that reduced overdue training and improved reporting accuracy.
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
 
-**Example Output:**
-Built a training tracker that closed xx overdue requirements, improved reporting accuracy by xx%, and gave leaders reliable visibility across xx Soldiers. The system reduced missed suspenses and strengthened the unit's ability to manage recurring training requirements.
+Input:
+
+> Built a training tracker for 80 Soldiers and cleared 46 overdue requirements.
+
+Output (Option 1):
+
+> [rank/name] developed a training tracker for 80 Soldiers, providing leaders clear visibility of individual requirements and completion status. The tool enabled focused follow-up and helped clear 46 overdue requirements, strengthening accountability and improving unit training readiness by xx%.

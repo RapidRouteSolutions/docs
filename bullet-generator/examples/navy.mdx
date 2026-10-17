@@ -1,137 +1,177 @@
 ---
 title: Navy
-description: Navy Bullet Generator Examples
+description: EVAL, FITREP and CHIEFEVAL formats with example inputs and drafts.
 ---
 
-RapidEPR supports quick Navy comments and form-aware Navy options for the exact NAVPERS section you are filling.
+## Navy evaluation examples
 
-## Current Navy Formats
+Choose the format for the Sailor's report and grade. Keep each person's
+drafts in a separate [package](/rapid-generator).
 
-**Form-Aware**
-
-- **EVAL - Tailored (E1-E6)** — NAVPERS 1616/26 section-aware output for E1-E6.
-- **FITREP - Tailored (W2-O6)** — NAVPERS 1610/2 section-aware output for W2-O6.
-- **Chief Eval Summary (Block 40)** — NAVPERS 1616/27 Block 40 Reporting Senior Comments on Performance.
-
-**General**
-
-- **Eval Bullet** — quick enlisted Navy EVAL-style output.
-- **Chief Eval** — v33 CHIEFEVAL trait comments grouped by trait.
-
-**Other**
-
-- **Opening Statement**
-- **Closing Statement**
-
-## If You Used the Old Names
-
-| Old name you may remember | Current option to use |
-| --- | --- |
-| Eval Bullet | Eval Bullet |
-| Chief Eval / Chief Eval (Updated) | Chief Eval |
-| Navy EVAL Tailored | EVAL - Tailored (E1-E6) |
-| Navy FITREP Tailored | FITREP - Tailored (W2-O6) |
-| Chief Eval Summary | Chief Eval Summary (Block 40) |
-| Opening Statement | Opening Statement |
-| Closing Statement | Closing Statement |
-
-For the most accurate current output, use **EVAL - Tailored (E1-E6)**, **FITREP - Tailored (W2-O6)**, or **Chief Eval Summary (Block 40)** when you know the section you are filling.
-
-## Eval Bullet
-
-Designed specifically for the U.S. Navy Enlisted Evaluation system, this format transforms plain achievements into impactful narrative statements that highlight a Sailor's traits and accomplishments. Outputs aim to fall between 300-400 characters. Each statement starts with a descriptor of the Sailor's trait or role, such as "Dynamic Leader" or "Operational Expert", followed by a clear action and its measurable effect. The format avoids personal pronouns and unfamiliar acronyms, focusing on naval terminology. A key feature is the emphasis on quantitative metrics, always tying achievements back to the wider Navy mission.
-
-**Example Input (Variation 2):**
-I developed a web application that streamlines the creation of military performance reports.
-
-**Example Output:**
-Innovative Developer. Engineered a cutting-edge web application to streamline military performance report creation; integrated xx automated templates, reduced report generation time by xx%, and enhanced accuracy, enabling xx% faster dissemination of critical performance data, optimizing decision-making and bolstering mission effectiveness. (Character Count: 341)
-
-## Chief Eval
-
-Built for NAVPERS 1616/27 (CHIEFEVAL) and aligned with the v33 trait set. Unlike the standard three-option formats, the Chief Eval generator produces up to three short performance comments for each of the seven CPO guiding-principle traits: **Technical Mastery**, **Institutional Expertise**, **Professionalism**, **Integrity**, **Accountability**, **Deckplate Leadership**, and **Team Effectiveness**. The result panel groups comments by trait so each can be copied independently into the matching CHIEFEVAL block. Each comment is standalone (not a continuation), action / result / impact oriented, and sized to fit the v33 six-line trait limit.
-
-**Example Input:**
-CMC led xx-Sailor mess through 7-month deployment, drove qualification pipeline that produced xx new watchstanders, and set new climate baseline after rebuilding mess engagement.
-
-**Example Output (Deckplate Leadership):**
-- Led xx-Sailor mess through 7-month deployment, sustaining standards and watch-team performance under high OPTEMPO.
-- Rebuilt mess engagement rhythm, restoring deckplate visibility and chief mentorship across xx work centers.
-- Drove qualification pipeline producing xx new watchstanders, expanding watchbill depth and divisional readiness.
-
-## Opening Statement
-
-Generates a concise opening kicker for the start of an enlisted Navy EVAL or comments block. Designed to set the tone in one or two short lines without consuming room needed for performance bullets. Keep it factual, mission-tied, and free of inflated praise — BUPERS guidance favors everyday language over flowery openings.
-
-**Example Input:**
-Top E5 in the work center; led INSURV prep and got xx Sailors qualified.
-
-**Example Output:**
-TOP-TIER PETTY OFFICER WHO DELIVERED INSPECTION READINESS AND BUILT BENCH STRENGTH ACROSS THE WORK CENTER.
-
-## Closing Statement
-
-Generates a closing kicker for the end of an EVAL or comments block, typically tied to advancement, retention, or next-responsibility potential. Output stays consistent with whatever recommendation tier the user supplies and avoids fabricating Early Promote / Must Promote / Promotable language unsupported by the input.
-
-**Example Input:**
-Ready for LPO and instructor duty; recommended for advancement to E6.
-
-**Example Output:**
-RECOMMENDED FOR LPO AND ADVANCEMENT TO E6 — RETAIN IN MOST DEMANDING DIVISIONAL LEADERSHIP POSITIONS.
-
-## FITREP - Tailored (W2-O6)
-
-Built for **NAVPERS 1610/2** (Fitness Report and Counseling Record), warrant officers and officers W2-O6. Section-aware — pick one of 12 FITREP surfaces and the three options are sized to that section's BUPERS guidance and NAVFIT98A character / line caps:
-
-- **Block 28** Command Employment / Achievements
-- **Block 29** Primary / Collateral / Watchstanding Duties / PFA
-- **Block 33-39 trait support** Professional Expertise, Climate / EO, Bearing / Character, Teamwork, Mission Accomplishment / Initiative, Leadership, Tactical Performance (each generates Block 41 comment text supporting that trait, not text for the trait box itself)
-- **Block 40** Career Recommendations
-- **Block 41** Comments on Performance (full narrative, 12-16 lines, 12-point safe)
-- **Block 41 GRGB** Get Real Get Better commentary for CDR/CAPT FITREPs
-
-Output follows BUPERS Chapter 13: bullet form for the Block 41 narrative, factual openings, action / result / impact lines, `xx` placeholders for unsupplied numbers, and no fabricated promotion-tier language.
-
-**Example Input:**
-LT Smith was communications officer for 12 months, led 18 Sailors, managed $2.4M radio suite, CMS custodian, OOD underway.
-
-**Section:** Primary / Collateral / Watchstanding Duties / PFA (Block 29)
-
-**Example Output (Option 1):**
-COMMO
-COMMUNICATIONS OFFICER-12; CMS CUSTODIAN-12; OOD U/W-xx. Led 18 Sailors; managed $2.4M radio suite and CMS program through the reporting period.
+These examples were generated in RapidEPR on October 17, 2026 with fictional
+inputs and Moderate variation. Each example shows one complete returned option,
+except Chief Eval, which shows all trait groups. Review added claims and replace
+placeholders such as `xx` with verified facts before use.
 
 ## EVAL - Tailored (E1-E6)
 
-Built for **NAVPERS 1616/26** (Evaluation Report and Counseling Record), E1-E6 enlisted Sailors. Section-aware — pick one of 10 EVAL surfaces and the three options are sized to that section:
+Use this format for NAVPERS 1616/26. Select a trait, Career Recommendations,
+Comments on Performance or Qualifications / Achievements.
 
-- **Block 33-39 trait support** Professional Knowledge, Quality of Work, Climate / EO, Bearing / Character, Personal Job Accomplishment / Initiative, Teamwork, Leadership (each generates Block 43 comment text supporting that trait)
-- **Block 41** Career Recommendations
-- **Block 43** Comments on Performance (full narrative, 12-16 lines)
-- **Block 44** Qualifications / Achievements
+| Setting        | Selection                          |
+| -------------- | ---------------------------------- |
+| Variation      | Moderate                           |
+| Area / Section | Comments on Performance (Block 43) |
 
-Tone scales by paygrade context: E1-E3 emphasizes qualification growth, watchstanding, and reliability; E4-E6 emphasizes petty officer leadership, program ownership, and advancement potential. For E5/E6 full Block 43 output, room is reserved for the post summary group reporting senior cumulative average score (PSG RSCA) — placeholder only, never invented.
+Input:
 
-**Example Input:**
-E6 Jones led 14 Sailors through INSURV prep, corrected 184 discrepancies, improved work center maintenance from 72 to 96 percent, qualified 9 Sailors.
+> E6 Jones led 14 Sailors through INSURV preparation. Corrected 184 discrepancies, raised maintenance completion from 72% to 96% and qualified nine Sailors.
 
-**Section:** Comments on Performance (Block 43)
+Output (Option 1):
 
-**Example Output (Option 1, abbreviated):**
-DELIVERED INSPECTION READINESS ACROSS THE WORK CENTER.
-- Led 14 Sailors through INSURV prep and corrected 184 discrepancies.
-- Restored maintenance discipline across work center before inspection.
-- Improved completion from 72% to 96%, strengthening equipment readiness.
-- Qualified 9 Sailors ahead of inspection, increasing watch team depth.
+> - Led 14 Sailors through INSURV preparation, aligning xx workstreams for inspection readiness.
+> - Corrected 184 INSURV discrepancies across xx maintenance actions, closing documented gaps.
+> - Raised completion from 72% to 96% across xx tracked maintenance actions.
+> - Qualified 9 Sailors across xx watchstations, expanding work-center qualification depth.
+> - Coordinated xx inspection checks with 14 Sailors, advancing INSURV corrective work.
+> - Tracked 184 discrepancies through xx follow-up reviews, sustaining closure accountability.
+> - Applied 72%-to-96% maintenance gains across xx systems during INSURV preparation.
+> - Trained 9 Sailors through xx qualification events, building depth for INSURV requirements.
+> - Closed xx maintenance actions across xx systems, reinforcing 96% completion results.
+> - Managed INSURV preparation with 14 Sailors and 184 corrections, documenting team output.
+
+## FITREP - Tailored (W2-O6)
+
+Use this format for NAVPERS 1610/2. Select the section you are writing,
+such as duties, a trait, career recommendations or comments on performance.
+
+| Setting        | Selection                                              |
+| -------------- | ------------------------------------------------------ |
+| Variation      | Moderate                                               |
+| Area / Section | Primary / Collateral / Watchstanding Duties (Block 29) |
+
+Input:
+
+> LT Smith served as communications officer for 12 months, led 18 Sailors and managed a $2.4 million radio suite. Also served as CMS custodian.
+
+Output (Option 1):
+
+> COMMO
+> COMMUNICATIONS OFFICER-12; CMS CUSTODIAN. Led 18 Sailors; managed $2.4M radio suite and CMS accountability, coordinating xx maintenance actions, xx circuit checks, xx inventory items, and communications support for xx command evolutions.
+
+## Chief Eval
+
+Use this format for comments grouped under the seven CHIEFEVAL traits:
+Technical Mastery, Institutional Expertise, Professionalism, Integrity,
+Accountability, Deckplate Leadership and Team Effectiveness.
+
+An empty trait group displays "No supporting accomplishment supplied." Add
+relevant accomplishments to generate text for that trait; do not copy the
+empty-group message into an evaluation.
+
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
+
+Input:
+
+> Led the Chief's Mess through a seven-month deployment. Mentored 12 first-class petty officers and helped eight qualify as new watchstanders.
+
+Output (all seven trait groups):
+
+### Technical Mastery
+
+> Helped 8 Sailors qualify as watchstanders during a 7-month deployment, expanding watchbill capability and supporting operational readiness.
+
+### Institutional Expertise
+
+> No supporting accomplishment supplied.
+
+### Professionalism
+
+> Mentored 12 first-class petty officers during a 7-month deployment, strengthening professional growth and future leadership capacity.
+
+### Integrity
+
+> No supporting accomplishment supplied.
+
+### Accountability
+
+> No supporting accomplishment supplied.
+
+### Deckplate Leadership
+
+> Led the Chief's Mess through a 7-month deployment, sustaining senior-enlisted leadership and supporting Sailors throughout operations.
+
+### Team Effectiveness
+
+> No supporting accomplishment supplied.
 
 ## Chief Eval Summary (Block 40)
 
-Built for **NAVPERS 1616/27 Block 40** Reporting Senior Comments on Performance. Returns three options shaped to the v33 six-line Block 40 surface: a concise opening or ranking line when factual, one to three performance / leadership impact lines, optional soft breakout when supplied, and a closing potential or retention line. Returns the standard three-option result format (independent of the seven-trait Chief Eval format above).
+Use this format for the Reporting Senior Comments on Performance section
+of NAVPERS 1616/27.
 
-**Example Input:**
-CMC led mess through deployment with deck plate impact, mentored five first-class to advance, sustained xx% retention.
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
 
-**Example Output (Option 1):**
-LED CHIEF'S MESS THROUGH DEPLOYMENT WITH SUSTAINED DECKPLATE IMPACT.
-- Mentored 5 first-class petty officers to advance, strengthening mess bench.
-- Sustained xx% retention across the mess through reporting period.
+Input:
+
+> Led the Chief's Mess through deployment, mentored five first-class petty officers who advanced and sustained 95% retention.
+
+Output (Option 1):
+
+> TRUSTED CHIEF'S MESS LEADER THROUGH DEPLOYMENT.
+> Led the Mess through deployment, sustaining unity, standards, and focus amid operational demands.
+> Mentored five First Class Petty Officers; all five advanced, strengthening the command's next generation of enlisted leaders.
+> Sustained 95% retention while prioritizing Sailor development and mission readiness.
+> Retain and assign to demanding CPO Mess leadership roles.
+
+## Eval Bullet
+
+Use this format for a standalone enlisted EVAL statement.
+
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
+
+Input:
+
+> Built a maintenance tracker for three work centers and cut weekly report preparation from four hours to one.
+
+Output (Option 1):
+
+> Innovative Technician. Built and implemented a maintenance tracker serving three work centers, streamlining weekly reporting and cutting preparation time from four hours to one. Saved three hours—or 75%—each week, improved visibility of maintenance actions, and enabled more timely oversight of work essential to equipment readiness and mission execution.
+
+## Opening Statement
+
+Provide the performance or ranking you want to introduce.
+
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
+
+Input:
+
+> Top E5 in the work center. Led INSURV preparation and helped six Sailors qualify.
+
+Output (Option 1):
+
+> TOP E-5 IN THE WORK CENTER, [Rank/Name] DROVE INSURV PREPARATIONS AND QUALIFIED SIX SAILORS—A MISSION-READY LEADER WHO ELEVATES THE ENTIRE TEAM!
+
+## Closing Statement
+
+Provide your advancement and assignment recommendations.
+
+| Setting   | Selection |
+| --------- | --------- |
+| Variation | Moderate  |
+
+Input:
+
+> Recommended for advancement to E6 and assignment as an LPO or instructor.
+
+Output (Option 1):
+
+> [Rank/Name], [Rating] is ready to lead at the next level—advance to E6 and assign as an LPO or instructor to amplify mission readiness and Sailor development.

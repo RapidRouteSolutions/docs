@@ -17,6 +17,8 @@
             "group": "Getting started",
             "pages": [
               "index",
+              "rapid-generator",
+              "rapidregs",
               "releases",
               "faq"
             ]
@@ -64,7 +66,8 @@
                 "group": "Guides",
                 "pages": [
                   "military-units/guides/admin-guide",
-                  "military-units/guides/member-guide"                ]
+                  "military-units/guides/member-guide"
+                ]
               }
             ]
           }
